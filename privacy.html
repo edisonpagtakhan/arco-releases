@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arco Privacy Policy</title>
+<style>
+  :root {
+    --plum: #6B3A5B;
+    --honey: #E0A23C;
+    --bg: #ffffff;
+    --surface: #faf7f9;
+    --ink: #23181f;
+    --muted: #6f6470;
+    --border: #ece5ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --plum: #d69bc2;
+      --honey: #E0A23C;
+      --bg: #171215;
+      --surface: #1e1822;
+      --ink: #ece7ea;
+      --muted: #a99fa8;
+      --border: #2c2530;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 22px 80px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 22px; margin-bottom: 8px; }
+  h1 { color: var(--plum); font-size: 2rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  h2 { color: var(--plum); font-size: 1.18rem; margin: 40px 0 10px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--plum); text-decoration: underline; text-underline-offset: 2px; }
+  strong { color: var(--ink); }
+  .lead { font-size: 1.05rem; }
+  .contact {
+    margin-top: 40px; padding: 18px 20px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 14px;
+  }
+  .contact a { font-weight: 600; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Arco Privacy Policy</h1>
+    <p class="updated">Last updated: 2026-07-10</p>
+  </header>
+
+  <p class="lead">Arco is a personal finance tracker. This policy explains what data Arco handles and how,
+  in plain language, and is written to be accurate to how the app actually works.</p>
+
+  <h2>The short version</h2>
+  <ul>
+    <li><strong>Arco works fully offline and without an account.</strong> If you never sign in,
+      <strong>none of your financial data ever leaves your device.</strong></li>
+    <li><strong>Signing in is optional</strong>, and it is the only thing that sends data off your device.
+      It exists purely to <strong>sync your data across your own devices.</strong></li>
+    <li>Arco shows <strong>no ads</strong> and contains <strong>no third-party advertising or
+      analytics/tracking.</strong></li>
+  </ul>
+
+  <h2>What Arco stores on your device</h2>
+  <p>Your accounts, transactions, categories, budgets, and recurring rules are stored <strong>locally</strong>
+  on your device. Appearance and currency settings are stored locally too, and if you enable App Lock, a PIN
+  <strong>verifier</strong> (a salted one-way hash; your PIN itself is never stored). Uninstalling the app, or
+  using <strong>Reset all data</strong> in the app, removes this local data.</p>
+
+  <h2>What is sent off your device (only if you sign in)</h2>
+  <p>If you create an account and sign in, the following are transmitted, over encrypted connections (HTTPS),
+  to enable cross-device sync:</p>
+  <ul>
+    <li><strong>Your email address</strong>, to create and authenticate your account.</li>
+    <li><strong>Your financial data</strong> (accounts, transactions, categories, budgets, recurring rules),
+      stored in your account so it can appear on your other signed-in devices.</li>
+  </ul>
+  <p>This data is processed by our backend service providers acting on our behalf:</p>
+  <ul>
+    <li><strong>Supabase</strong>: authentication and database hosting.</li>
+    <li><strong>PowerSync</strong>: the sync service that keeps your devices up to date.</li>
+  </ul>
+  <p>We do <strong>not</strong> sell your data or share it for advertising.</p>
+
+  <h2>Exchange rates</h2>
+  <p>To show amounts in your chosen currency, Arco fetches public exchange-rate data from
+  <strong>Frankfurter</strong> (European Central Bank reference rates). Only currency codes are requested, so
+  <strong>no personal or financial information is sent</strong> with these requests.</p>
+
+  <h2>Security</h2>
+  <p>Connections use HTTPS. App Lock (optional) gates the app with a 6-digit PIN and, where available,
+  biometrics. The PIN is never stored; only a salted PBKDF2 verifier is held in your platform's secure
+  storage (Android Keystore / iOS Keychain).</p>
+
+  <h2>Retaining and deleting your data</h2>
+  <ul>
+    <li><strong>Local data:</strong> use <strong>Reset all data</strong> in the app, or uninstall.</li>
+    <li><strong>Synced data:</strong> signing out clears the copy on that device. Running
+      <strong>Reset all data</strong> while signed in also clears your data across your other devices.</li>
+    <li>To request deletion of your account and any associated data, contact us at the address below.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Arco is not directed to children and does not knowingly collect data from children.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy; material changes will be reflected by the "Last updated" date above.</p>
+
+  <div class="contact">
+    <p style="margin:0">Questions or data requests:
+      <a href="mailto:edisonpagtakhan03@gmail.com">edisonpagtakhan03@gmail.com</a></p>
+  </div>
+
+  <footer>© Arco</footer>
+</div>
+</body>
+</html>
