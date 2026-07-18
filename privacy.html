@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arco Privacy Policy</title>
+<title>Arco — Privacy Policy</title>
 <style>
   :root {
     --plum: #6B3A5B;
@@ -45,84 +45,69 @@
   li { margin: 6px 0; }
   a { color: var(--plum); text-decoration: underline; text-underline-offset: 2px; }
   strong { color: var(--ink); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 5px; padding: 1px 5px; }
   .lead { font-size: 1.05rem; }
-  .contact {
-    margin-top: 40px; padding: 18px 20px; background: var(--surface);
-    border: 1px solid var(--border); border-radius: 14px;
-  }
-  .contact a { font-weight: 600; }
   footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>Arco Privacy Policy</h1>
-    <p class="updated">Last updated: 2026-07-10</p>
+    <h1>Arco — Privacy Policy</h1>
+    <p class="updated">Last updated: 2026-07-17</p>
   </header>
 
-  <p class="lead">Arco is a personal finance tracker. This policy explains what data Arco handles and how,
-  in plain language, and is written to be accurate to how the app actually works.</p>
-
+  <p class="lead">Arco is a personal finance tracker. This policy explains what data Arco handles and how. It is written to be accurate to how the app actually works — in plain language.</p>
+  <p>Arco is provided by <strong>Edison James Pagtakhan</strong>, an individual based in the Republic of the Philippines, who is the <strong>Personal Information Controller</strong> responsible for your personal data under the <strong>Data Privacy Act of 2012 (RA 10173)</strong>. You can reach us about this policy or any data request at <strong><a href="mailto:edisonpagtakhan03@gmail.com">edisonpagtakhan03@gmail.com</a></strong>.</p>
   <h2>The short version</h2>
   <ul>
-    <li><strong>Arco works fully offline and without an account.</strong> If you never sign in,
-      <strong>none of your financial data ever leaves your device.</strong></li>
-    <li><strong>Signing in is optional</strong>, and it is the only thing that sends data off your device.
-      It exists purely to <strong>sync your data across your own devices.</strong></li>
-    <li>Arco shows <strong>no ads</strong> and contains <strong>no third-party advertising or
-      analytics/tracking.</strong></li>
+    <li><strong>Arco works fully offline and without an account.</strong> If you never sign in, Arco is designed so that <strong>your financial data stays on your device</strong> and is not sent to our servers.</li>
+    <li><strong>Signing in is optional.</strong> Apart from optional crash diagnostics you can turn off (see <em>Diagnostics</em>), signing in is the <em>only</em> thing that sends your <strong>financial data</strong> off your device — it exists purely to <strong>sync your data across your own devices.</strong></li>
+    <li>Arco shows <strong>no ads</strong> and contains <strong>no third-party advertising trackers</strong>. Arco uses limited, privacy-respecting <strong>diagnostics</strong> (crash and error reporting) to stay reliable — never to advertise to you or to sell your data.</li>
   </ul>
-
   <h2>What Arco stores on your device</h2>
-  <p>Your accounts, transactions, categories, budgets, and recurring rules are stored <strong>locally</strong>
-  on your device. Appearance and currency settings are stored locally too, and if you enable App Lock, a PIN
-  <strong>verifier</strong> (a salted one-way hash; your PIN itself is never stored). Uninstalling the app, or
-  using <strong>Reset all data</strong> in the app, removes this local data.</p>
-
-  <h2>What is sent off your device (only if you sign in)</h2>
-  <p>If you create an account and sign in, the following are transmitted, over encrypted connections (HTTPS),
-  to enable cross-device sync:</p>
+  <p>Your accounts, transactions, categories, budgets, recurring rules, and notes are stored <strong>locally</strong> on your device. Appearance and currency settings, and — if you enable App Lock — a PIN <strong>verifier</strong> (a salted one-way hash; your PIN itself is never stored) are also stored locally. Uninstalling the app, or using <strong>Reset all data</strong> in the app, removes this local data.</p>
+  <h2>What is sent off your device when you sign in</h2>
+  <p>Separately, optional crash diagnostics may be sent even without an account — see <strong>Diagnostics</strong> below.</p>
+  <p>If you create an account and sign in, the following are transmitted, over encrypted connections (HTTPS), to enable cross-device sync:</p>
   <ul>
     <li><strong>Your email address</strong>, to create and authenticate your account.</li>
-    <li><strong>Your financial data</strong> (accounts, transactions, categories, budgets, recurring rules),
-      stored in your account so it can appear on your other signed-in devices.</li>
+    <li><strong>Your financial data</strong> (accounts, transactions, categories, budgets, recurring rules, and notes), stored in your account so it can appear on your other signed-in devices.</li>
   </ul>
   <p>This data is processed by our backend service providers acting on our behalf:</p>
   <ul>
-    <li><strong>Supabase</strong>: authentication and database hosting.</li>
-    <li><strong>PowerSync</strong>: the sync service that keeps your devices up to date.</li>
+    <li><strong>Supabase</strong> — authentication and database hosting.</li>
+    <li><strong>PowerSync</strong> — the sync service that keeps your devices up to date.</li>
   </ul>
-  <p>We do <strong>not</strong> sell your data or share it for advertising.</p>
-
+  <p>These providers — together with <strong>Sentry</strong> (diagnostics) and <strong>Frankfurter</strong> (exchange rates) — process data on servers <strong>outside the Philippines</strong>. Where your personal data is transferred abroad, we remain accountable for it under the Data Privacy Act and require our providers to protect it and to process it only on our instructions. We do <strong>not</strong> sell your data or share it for advertising.</p>
+  <h2>Why we process your data (legal basis)</h2>
+  <p>Where you sign in, we process your email and financial data to <strong>perform the sync you ask for</strong> (contract). We process crash diagnostics with your <strong>consent</strong> (on by default, with an opt-out in settings) and our <strong>legitimate interest</strong> in keeping Arco reliable. If you never sign in and turn diagnostics off, we process no personal data about you on our servers.</p>
   <h2>Exchange rates</h2>
-  <p>To show amounts in your chosen currency, Arco fetches public exchange-rate data from
-  <strong>Frankfurter</strong> (European Central Bank reference rates). Only currency codes are requested, so
-  <strong>no personal or financial information is sent</strong> with these requests.</p>
-
+  <p>To show amounts in your chosen currency, Arco fetches public exchange-rate data from <strong>Frankfurter</strong> (European Central Bank reference rates). Only currency codes are included in the request — <strong>we do not send your account, email, or financial data</strong> with it. As with any internet request, your device's IP address is visible to the service.</p>
+  <h2>Diagnostics (crash and error reporting)</h2>
+  <p>To keep Arco reliable, the app reports crashes and technical errors to <strong>Sentry</strong>, a diagnostics service acting on our behalf. This is <strong>on by default</strong>, and you can <strong>turn it off</strong> in the app's settings. The reports contain technical information (such as the error and device/app details) to help us fix problems; they are configured <strong>not</strong> to attach personal identifiers (<code>sendDefaultPii=false</code>) and we apply scrubbing designed to remove personal and financial details before reports are sent. Crash diagnostics are <strong>not</strong> used to advertise to you and are never sold. This is the one thing Arco may send off your device even if you never sign in — turning the setting off stops it.</p>
   <h2>Security</h2>
-  <p>Connections use HTTPS. App Lock (optional) gates the app with a 6-digit PIN and, where available,
-  biometrics. The PIN is never stored; only a salted PBKDF2 verifier is held in your platform's secure
-  storage (Android Keystore / iOS Keychain).</p>
-
+  <p>Connections use HTTPS. App Lock (optional) gates the app with a 6-digit PIN and, where available, biometrics; the PIN is never stored — only a salted PBKDF2 verifier held in your platform's secure storage (Android Keystore / iOS Keychain).</p>
+  <p><strong>No method of transmission or storage is completely secure</strong>, so while we take reasonable steps to protect your data, we can't guarantee absolute security.</p>
+  <p>If a personal-data breach likely to cause you real harm occurs, we will notify you and the <strong>National Privacy Commission</strong> as required by the Data Privacy Act.</p>
   <h2>Retaining and deleting your data</h2>
+  <p>We keep your synced data for <strong>as long as your account exists</strong>, and you can remove it at any time:</p>
   <ul>
     <li><strong>Local data:</strong> use <strong>Reset all data</strong> in the app, or uninstall.</li>
-    <li><strong>Synced data:</strong> signing out clears the copy on that device. Running
-      <strong>Reset all data</strong> while signed in also clears your data across your other devices.</li>
-    <li>To request deletion of your account and any associated data, contact us at the address below.</li>
+    <li><strong>Synced data:</strong> signing out clears the copy on that device, and running <strong>Reset all data</strong> while signed in also clears your data across your other devices. If you have an account, <strong>Profile → Delete account</strong> deletes the account and the data synced to it — removed from our live systems promptly, with residual copies in encrypted backups overwritten in the ordinary course (typically within 30 days), and diagnostic reports deleted by our diagnostics provider after its standard retention period, except where we must keep information to comply with law.</li>
+    <li>You can also contact us at the address below to request deletion of your account and any associated data.</li>
   </ul>
-
+  <h2>Your rights</h2>
+  <p>Under the Data Privacy Act of 2012 (RA 10173) you may <strong>access</strong> the data we hold about you, <strong>correct</strong> it (you can edit your records directly in the app), <strong>object</strong> to or <strong>withdraw consent</strong> for processing, request <strong>erasure or blocking</strong>, and obtain a <strong>portable copy</strong> of your data (use <strong>Export</strong> or <strong>Backup</strong> in the app). You may also <strong>complain to the National Privacy Commission</strong> (privacy.gov.ph). To exercise any right, email <strong><a href="mailto:edisonpagtakhan03@gmail.com">edisonpagtakhan03@gmail.com</a></strong> and we'll respond within a reasonable period as required by law.</p>
   <h2>Children</h2>
-  <p>Arco is not directed to children and does not knowingly collect data from children.</p>
-
+  <p>Arco is intended for users <strong>18 and older</strong> and is <strong>not directed to anyone under 18</strong>. We do not knowingly collect data from anyone under 18; if you believe a minor has provided us data, contact us and we will delete it.</p>
   <h2>Changes</h2>
   <p>We may update this policy; material changes will be reflected by the "Last updated" date above.</p>
-
-  <div class="contact">
-    <p style="margin:0">Questions or data requests:
-      <a href="mailto:edisonpagtakhan03@gmail.com">edisonpagtakhan03@gmail.com</a></p>
-  </div>
+  <p>If Arco is acquired, merged, or its assets are transferred, your data may pass to the successor, which will remain bound by this policy or a materially equivalent one.</p>
+  <h2>Contact</h2>
+  <p>Questions or data requests: <strong><a href="mailto:edisonpagtakhan03@gmail.com">edisonpagtakhan03@gmail.com</a></strong></p>
+  <p>This Privacy Policy forms part of Arco's Terms of Service. Except where a non-waivable law provides otherwise, the <strong>disclaimers and limitation of liability in the Terms</strong> apply to this policy and to your use of Arco.</p>
 
   <footer>© Arco</footer>
 </div>
