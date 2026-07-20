@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Downloading Arco for macOS…</title>
+  <meta name="robots" content="noindex">
+  <!-- Instant hop to the current release's macOS disk image. `releases/latest/download/<name>`
+       is GitHub's built-in "latest asset" redirect, so this URL never needs updating per release. -->
+  <meta http-equiv="refresh" content="0; url=https://github.com/edisonpagtakhan/arco-releases/releases/latest/download/Arco.dmg">
+  <link rel="canonical" href="https://github.com/edisonpagtakhan/arco-releases/releases/latest/download/Arco.dmg">
+  <style>
+    :root {
+      --plum: #6B3A5B;
+      --honey: #E0A23C;
+      --bg: #FAF7F9;
+      --surface: #FFFFFF;
+      --ink: #221A20;
+      --muted: #6E6470;
+      --ov: #E8E1E5;
+      --r-md: 14px;
+      --r-lg: 20px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      line-height: 1.55;
+    }
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: var(--surface);
+      border: 1px solid var(--ov);
+      border-radius: var(--r-lg);
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .mark {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      border-radius: var(--r-md);
+      background: var(--plum);
+      color: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 800;
+    }
+    h1 { font-size: 1.4rem; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.01em; }
+    p { margin: 0 0 8px; color: var(--muted); font-size: 0.98rem; }
+    .fallback { margin-top: 22px; font-size: 0.95rem; }
+    a.dl {
+      color: var(--plum);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid var(--honey);
+      padding-bottom: 1px;
+    }
+    a.dl:hover { border-bottom-width: 3px; }
+    .hint { margin-top: 26px; font-size: 0.82rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="mark" aria-hidden="true">A</div>
+    <h1>Downloading Arco for macOS…</h1>
+    <p>Your download should start automatically in a moment.</p>
+    <p class="fallback">
+      Didn't start?
+      <a class="dl" href="https://github.com/edisonpagtakhan/arco-releases/releases/latest/download/Arco.dmg">Download Arco for Mac</a>
+    </p>
+    <p class="hint">
+      First launch shows a one-time “unidentified developer” prompt —
+      open <strong>System Settings → Privacy &amp; Security</strong> and choose <strong>Open Anyway</strong>.
+    </p>
+  </main>
+</body>
+</html>
