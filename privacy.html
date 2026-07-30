@@ -55,7 +55,7 @@
 <div class="wrap">
   <header>
     <h1>Arco — Privacy Policy</h1>
-    <p class="updated">Last updated: 2026-07-17</p>
+    <p class="updated">Last updated: 2026-07-30</p>
   </header>
 
   <p class="lead">Arco is a personal finance tracker. This policy explains what data Arco handles and how. It is written to be accurate to how the app actually works — in plain language.</p>
@@ -74,15 +74,28 @@
   <ul>
     <li><strong>Your email address</strong>, to create and authenticate your account.</li>
     <li><strong>Your financial data</strong> (accounts, transactions, categories, budgets, recurring rules, and notes), stored in your account so it can appear on your other signed-in devices.</li>
+    <li><strong>Support messages</strong> you choose to send from the in-app <strong>Contact support</strong> thread (Profile → About → Contact support), stored in your account so we can read and reply to them. Only messages you type there are sent — this feature is available only while you're signed in.</li>
+    <li><strong>A statement image or PDF you choose to import</strong> (Statement import — see the dedicated section below). Only a document you explicitly pick or photograph for import is sent, and only to extract its transactions; it is <strong>not</strong> stored on our servers afterward.</li>
   </ul>
   <p>This data is processed by our backend service providers acting on our behalf:</p>
   <ul>
     <li><strong>Supabase</strong> — authentication and database hosting.</li>
     <li><strong>PowerSync</strong> — the sync service that keeps your devices up to date.</li>
+    <li><strong>Anthropic</strong> — the AI provider that reads an imported statement to extract its transactions (Statement import only; see below).</li>
   </ul>
   <p>These providers — together with <strong>Sentry</strong> (diagnostics) and <strong>Frankfurter</strong> (exchange rates) — process data on servers <strong>outside the Philippines</strong>. Where your personal data is transferred abroad, we remain accountable for it under the Data Privacy Act and require our providers to protect it and to process it only on our instructions. We do <strong>not</strong> sell your data or share it for advertising.</p>
+  <h2>Statement import</h2>
+  <p>Statement import is optional and runs only when you choose it. When you photograph or upload a bank statement or receipt to import it:</p>
+  <ul>
+    <li>The document is sent over an encrypted connection to our backend (Supabase), which forwards it to our AI provider (<strong>Anthropic</strong>) purely to <strong>read the line items, work out what kind of statement it is (so each line is read the right way round) and suggest a category for each</strong>. Nothing happens until you tap to import a document, and the first time you do, a one-time in-app notice explains this and asks you to agree.</li>
+    <li><strong>Our servers do not store the statement image or the extracted text.</strong> The document is passed through to the AI provider and the result is returned to your device; the only thing we record is a per-account <strong>count</strong> of how many imports you've run (to enforce fair-use limits) — never any statement content.</li>
+    <li><strong>On your device</strong>, a photo you take for import is written to a temporary file that is <strong>deleted as soon as its contents have been read</strong> for upload — it is not kept in your gallery or the app's storage.</li>
+    <li><strong>Password-protected PDFs are unlocked on your device, and the password never leaves it.</strong> If a statement PDF needs a password, Arco asks you for it, uses it <strong>once, in memory, on your device</strong> to remove the file's encryption, and then discards it: the password is never written to disk, never saved, never included in a backup, and <strong>never transmitted</strong> to us or to the AI provider. Only the unlocked statement is uploaded, exactly as an ordinary PDF would be. (Many bank statements are merely restricted against printing or copying rather than locked shut; those are unlocked without asking you for anything.)</li>
+    <li><strong>At the AI provider (Anthropic):</strong> your document is processed <strong>only to extract the transactions</strong> and is <strong>not used to train models</strong>. Anthropic may retain it <strong>briefly</strong> for trust-and-safety and abuse-prevention purposes before deleting it, per its own retention practices. We do not claim it is deleted instantly.</li>
+    <li>The transactions you review and choose to save are then stored like any other data you enter — on your device, and in your account if you're signed in (Statement import requires an account).</li>
+  </ul>
   <h2>Why we process your data (legal basis)</h2>
-  <p>Where you sign in, we process your email and financial data to <strong>perform the sync you ask for</strong> (contract). We process crash diagnostics with your <strong>consent</strong> (on by default, with an opt-out in settings) and our <strong>legitimate interest</strong> in keeping Arco reliable. If you never sign in and turn diagnostics off, we process no personal data about you on our servers.</p>
+  <p>Where you sign in, we process your email and financial data to <strong>perform the sync you ask for</strong>, and any <strong>support messages</strong> you send to <strong>answer your support requests</strong> (contract). We process crash diagnostics with your <strong>consent</strong> (on by default, with an opt-out in settings) and our <strong>legitimate interest</strong> in keeping Arco reliable. If you never sign in and turn diagnostics off, we process no personal data about you on our servers.</p>
   <h2>Exchange rates</h2>
   <p>To show amounts in your chosen currency, Arco fetches public exchange-rate data from <strong>Frankfurter</strong> (European Central Bank reference rates). Only currency codes are included in the request — <strong>we do not send your account, email, or financial data</strong> with it. As with any internet request, your device's IP address is visible to the service.</p>
   <h2>Diagnostics (crash and error reporting)</h2>
