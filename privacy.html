@@ -75,7 +75,7 @@
   <ul>
     <li><strong>Your email address</strong>, to create and authenticate your account.</li>
     <li><strong>Your financial data</strong> (accounts, transactions, categories, budgets, recurring rules, and notes), stored in your account so it can appear on your other signed-in devices.</li>
-    <li><strong>Support messages</strong> you choose to send from the in-app <strong>Contact support</strong> thread (Profile → About → Contact support), stored in your account so we can read and reply to them. Only messages you type there are sent — this feature is available only while you're signed in.</li>
+    <li><strong>Support messages</strong> you choose to send from the in-app <strong>Contact support</strong> thread (Profile → About → Contact support), stored in your account so we can read and reply to them. Only messages you type there are sent — this feature is available only while you're signed in. So that we notice and answer promptly, a message you send there — along with the email address on your account — is also delivered to our own private support inbox on a <strong>third-party messaging service</strong>, which only we can read.</li>
     <li><strong>A statement image or PDF you choose to import, together with the names of your own categories</strong> (Statement import — see the dedicated section below). Only a document you explicitly pick or photograph for import is sent, and only to extract its transactions; your category names are sent with it so the suggested category for each line is one you already use. Neither is stored on our servers afterward. No other data from your account — no amounts, balances, accounts or existing transactions — is sent.</li>
   </ul>
   <p>This data is processed by our backend service providers acting on our behalf:</p>
@@ -83,6 +83,7 @@
     <li><strong>Supabase</strong> — authentication and database hosting.</li>
     <li><strong>PowerSync</strong> — the sync service that keeps your devices up to date.</li>
     <li><strong>Anthropic</strong> — the AI provider that reads an imported statement to extract its transactions (Statement import only; see below).</li>
+    <li><strong>A third-party messaging provider</strong> — hosts the private inbox we read and answer support messages in (Contact support only).</li>
   </ul>
   <p>These providers — together with <strong>Sentry</strong> (diagnostics), <strong>Frankfurter</strong> (exchange rates) and, if you subscribe, <strong>Google Play</strong> or <strong>Lemon Squeezy</strong> (payments — see <em>Payments and subscriptions</em>) — process data on servers <strong>outside the Philippines</strong>. Where your personal data is transferred abroad, we remain accountable for it under the Data Privacy Act and require our providers to protect it and to process it only on our instructions. We do <strong>not</strong> sell your data or share it for advertising.</p>
   <h2>Statement import</h2>
