@@ -55,7 +55,7 @@
 <div class="wrap">
   <header>
     <h1>Arco — Privacy Policy</h1>
-    <p class="updated">Last updated: 2026-08-11</p>
+    <p class="updated">Last updated: 2026-08-17</p>
   </header>
 
   <p class="lead">Arco is a personal finance tracker. This policy explains what data Arco handles and how. It is written to be accurate to how the app actually works — in plain language.</p>
@@ -70,10 +70,10 @@
   <h2>What Arco stores on your device</h2>
   <p>Your accounts, transactions, categories, budgets, recurring rules, and notes are stored <strong>locally</strong> on your device. Appearance and currency settings, and — if you enable App Lock — a PIN <strong>verifier</strong> (a salted one-way hash; your PIN itself is never stored) are also stored locally. Uninstalling the app, or using <strong>Reset all data</strong> in the app, removes this local data.</p>
   <h2>What is sent off your device when you sign in</h2>
-  <p>Separately, optional crash diagnostics may be sent even without an account — see <strong>Diagnostics</strong> below.</p>
+  <p>Separately, optional crash diagnostics may be sent even without an account — see <strong>Diagnostics</strong> below. Also without being signed in: if you ask to reset your password, the email address you type is sent so a one-time code can be emailed to you.</p>
   <p>If you create an account and sign in, the following are transmitted, over encrypted connections (HTTPS), to enable cross-device sync:</p>
   <ul>
-    <li><strong>Your email address</strong>, to create and authenticate your account.</li>
+    <li><strong>Your email address</strong>, to create and authenticate your account, and to send you a password-reset code if you ask for one.</li>
     <li><strong>Your financial data</strong> (accounts, transactions, categories, budgets, recurring rules, and notes), stored in your account so it can appear on your other signed-in devices.</li>
     <li><strong>Support messages</strong> you choose to send from the in-app <strong>Contact support</strong> thread (Profile → About → Contact support), stored in your account so we can read and reply to them. Only messages you type there are sent — this feature is available only while you're signed in. So that we notice and answer promptly, a message you send there — along with the email address on your account — is also delivered to our own private support inbox on a <strong>third-party messaging provider</strong>.</li>
     <li><strong>A statement image or PDF you choose to import, together with the names of your own categories</strong> (Statement import — see the dedicated section below). Only a document you explicitly pick or photograph for import is sent, and only to extract its transactions; your category names are sent with it so the suggested category for each line is one you already use. Neither is stored on our servers afterward. No other data from your account — no amounts, balances, accounts or existing transactions — is sent.</li>
@@ -84,6 +84,7 @@
     <li><strong>PowerSync</strong> — the sync service that keeps your devices up to date.</li>
     <li><strong>Anthropic</strong> — the AI provider that reads an imported statement to extract its transactions (Statement import only; see below).</li>
     <li><strong>A third-party messaging provider</strong> — hosts the private inbox we read and answer support messages in (Contact support only).</li>
+    <li><strong>An email delivery provider</strong> — delivers the one-time code that lets you reset your password (password reset only — sent whether or not you are signed in).</li>
   </ul>
   <p>These providers — together with <strong>Sentry</strong> (diagnostics), <strong>Frankfurter</strong> (exchange rates) and, if you subscribe, <strong>Google Play</strong> or <strong>Lemon Squeezy</strong> (payments — see <em>Payments and subscriptions</em>) — process data on servers <strong>outside the Philippines</strong>. Where your personal data is transferred abroad, we remain accountable for it under the Data Privacy Act and require our providers to protect it and to process it only on our instructions. We do <strong>not</strong> sell your data or share it for advertising.</p>
   <h2>Statement import</h2>
