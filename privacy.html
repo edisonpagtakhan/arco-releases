@@ -55,7 +55,7 @@
 <div class="wrap">
   <header>
     <h1>Arco — Privacy Policy</h1>
-    <p class="updated">Last updated: 2026-08-17</p>
+    <p class="updated">Last updated: 2026-08-20</p>
   </header>
 
   <p class="lead">Arco is a personal finance tracker. This policy explains what data Arco handles and how. It is written to be accurate to how the app actually works — in plain language.</p>
@@ -76,6 +76,7 @@
     <li><strong>Your email address</strong>, to create and authenticate your account, and to send you a password-reset code if you ask for one.</li>
     <li><strong>Your financial data</strong> (accounts, transactions, categories, budgets, recurring rules, and notes), stored in your account so it can appear on your other signed-in devices.</li>
     <li><strong>Support messages</strong> you choose to send from the in-app <strong>Contact support</strong> thread (Profile → About → Contact support), stored in your account so we can read and reply to them. Only messages you type there are sent — this feature is available only while you're signed in. So that we notice and answer promptly, a message you send there — along with the email address on your account — is also delivered to our own private support inbox on a <strong>third-party messaging provider</strong>.</li>
+    <li><strong>A notification token for this device</strong>, on Android only, so we can tell you a support reply has arrived. It is a random identifier Google issues to this installation of Arco — not to you, and not tied to your phone or SIM. It is registered when you sign in on Android, which happens before we ask you about notifications and whether or not you allow them. See <em>Notifications</em>.</li>
     <li><strong>A statement image or PDF you choose to import, together with the names of your own categories</strong> (Statement import — see the dedicated section below). Only a document you explicitly pick or photograph for import is sent, and only to extract its transactions; your category names are sent with it so the suggested category for each line is one you already use. Neither is stored on our servers afterward. No other data from your account — no amounts, balances, accounts or existing transactions — is sent.</li>
   </ul>
   <p>This data is processed by our backend service providers acting on our behalf:</p>
@@ -84,9 +85,19 @@
     <li><strong>PowerSync</strong> — the sync service that keeps your devices up to date.</li>
     <li><strong>Anthropic</strong> — the AI provider that reads an imported statement to extract its transactions (Statement import only; see below).</li>
     <li><strong>A third-party messaging provider</strong> — hosts the private inbox we read and answer support messages in (Contact support only).</li>
+    <li><strong>Google (Firebase Cloud Messaging)</strong> — delivers the notification that tells you a support reply has arrived, on Android only. It carries no message content — see <em>Notifications</em> below.</li>
     <li><strong>An email delivery provider</strong> — delivers the one-time code that lets you reset your password (password reset only — sent whether or not you are signed in).</li>
   </ul>
   <p>These providers — together with <strong>Sentry</strong> (diagnostics), <strong>Frankfurter</strong> (exchange rates) and, if you subscribe, <strong>Google Play</strong> or <strong>Lemon Squeezy</strong> (payments — see <em>Payments and subscriptions</em>) — process data on servers <strong>outside the Philippines</strong>. Where your personal data is transferred abroad, we remain accountable for it under the Data Privacy Act and require our providers to protect it and to process it only on our instructions. We do <strong>not</strong> sell your data or share it for advertising.</p>
+  <h2>Notifications</h2>
+  <p>On <strong>Android</strong>, Arco can send you a notification when support replies to your message. This is the only notification Arco ever sends — there is no marketing, no re-engagement, and no other kind of alert.</p>
+  <ul>
+    <li><strong>You are asked first, once.</strong> The request appears right after you send your first support message, and once you answer it — either way — you are never asked again. Leaving the thread with the question still up does not count as an answer: it is dropped and raised again after your next message, so the ask always belongs to a send you just made. If you decline, nothing is shown to you unless you later turn notifications on for Arco in your phone's settings, and the unread mark on the Profile tab is what tells you a reply arrived. Declining does not undo the token: it is registered when you sign in, before the request appears, and a reply still sends the same content-free message to your device — your phone just shows nothing for it.</li>
+    <li><strong>The notification contains no message content.</strong> It says only that support replied. The reply's text is never put in the notification — your device already has it from sync, and reads it from there. This is deliberate: it keeps the content away from the delivery provider, and stops a reply appearing on the lock screen of a shared phone.</li>
+    <li><strong>What is sent to Google to deliver it</strong>: the notification token for your device, the fixed wording above, and your account identifier — a random id, not your email — which your device uses to check the notification is meant for the account currently signed in on it.</li>
+    <li><strong>The token is removed when you sign out</strong>, and when you delete your account. If your device is offline at sign-out, the token stops being used the next time anyone signs in on that device, or once Google reports it as no longer valid.</li>
+    <li>On <strong>desktop</strong>, the equivalent notification is produced by the app itself while it is running and nothing is sent to a delivery provider. On <strong>iOS</strong> there are no notifications at all.</li>
+  </ul>
   <h2>Statement import</h2>
   <p>Statement import is optional and runs only when you choose it. When you photograph or upload a bank statement or receipt to import it:</p>
   <ul>
